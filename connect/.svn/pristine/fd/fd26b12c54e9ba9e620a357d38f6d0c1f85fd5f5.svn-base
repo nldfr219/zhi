@@ -1,0 +1,615 @@
+.scSprite {background:url(../image/scIcons50by50.png);}
+	
+.scIcon {
+	height: 50px;
+	width: 50px;
+	}
+	
+.user {background-position:0px 0px;}
+.medInterpreter {background-position: -50px 0px;}
+.community {background-position: -100px 0px;}
+.healthEd {background-position: -150px 0px;}
+.california {background-position: -200px 0px;}
+.tshirt {background-position: -250px 0px;}
+
+.document {background-position:0px -50px;}
+.image {background-position: -50px -50px;}
+.camera {background-position: -100px -50px;}
+.maleDoctor {background-position: -150px -50px;}
+.femaleDoctor {background-position: -200px -50px;}
+.otherDoctor {background-position: -250px -50px;}
+
+.crownLarge {background-position:0px -100px;}
+
+
+
+/*
+General styling for 5 pages.
+
+(1) Chat
+(2) Profile
+(3) Academic (Main)
+(4) Edit
+(5) Viewer
+
+Chat = divided into 2 columns (left = 1/3 and right = 2/3)
+Profile = top half divided into 3 columns (all 1/3) and bottom half divided into 2 columns (left and right = 1/2)
+Academic (Main) and Edit = 1 column only
+Viewer = top half (1 column only) and bottom half divided into 2 columns (left and right = 1/2)
+
+Icons (default) = #A9A9A9
+Icons (hover) = black
+*/
+
+/* Begin StudentCharts Top Loader */
+
+#progressBarSpace {
+	min-height: 2px;
+	width: 946px;
+	}
+	
+#progressBar {
+	position: absolute;	
+	white-space: nowrap;
+	overflow: hidden;	
+	background: #e3e3e3;	
+   	background: -moz-linear-gradient(left, #000000, #e3e3e3);
+    background: -webkit-gradient(linear, left top, right top, from(#000000), to(#e3e3e3));	
+	margin: 0 2px 0 2px;
+	height: 2px;
+	width: 400px;
+	animation-name: scProgressBar;
+	animation-duration: 3.0s;
+	animation-iteration-count: once;
+	animation-timing-function: cubic-bezier(0.435, 1.005, 0.595, 0.965); 	
+	-moz-animation-name: scProgressBar;
+	-moz-animation-duration: 3.0s;
+	-moz-animation-iteration-count: once;
+	-moz-animation-timing-function: cubic-bezier(0.435, 1.005, 0.595, 0.965); 
+	-webkit-animation-name: scProgressBar;
+	-webkit-animation-duration: 3.0s;
+	-webkit-animation-iteration-count: once;
+	-webkit-animation-timing-function: cubic-bezier(0.435, 1.005, 0.595, 0.965); 	
+}
+
+@keyframes scProgressBar {
+	to {
+		-webkit-transform:translateX(546px);
+	}	
+}
+
+@-moz-keyframes scProgressBar {
+	to {
+		-moz-transform:translateX(546px);
+	}	
+}
+
+@-webkit-keyframes scProgressBar {
+	to {
+		-webkit-transform:translateX(546px);
+	}
+}
+
+/* End StudentCharts Top Loader */
+
+.profileImageThumb img{
+	max-height:50px;
+	max-width:50px;
+}
+
+.oneThirdLeftColumnStyle {
+/*	float:left; */
+	width: 450.5px;
+	}
+	
+.twoThirdRightColumnStyle {
+	width: 600px;
+	margin: 5px 5px 5px 452.5px;	
+	}
+	
+.msgBoxStyle {
+	border-bottom: 1px solid #aaaaaa;
+	}
+	
+.msgBoxInputStyle {
+	font-family: arial,sans-serif;
+	font-size: 1.0em;
+	}
+	
+.msgBoxSubmitStyle {
+	vertical-align: bottom;
+	padding-bottom: 3px;
+	}
+	
+.mbInputSpaceStyle {
+	margin-left: 32px;
+	}
+	
+.mbSubInputSpaceStyle {
+	margin-left: 40px;
+	} 
+	
+.thumbSpaceStyle {
+	width: 52px;
+	text-align: center;
+	vertical-align: text-top;
+	}
+
+.convsCardStyle {
+	margin-left: 16px;
+    position: relative;  
+    background-color: #e3e3e3;  
+    -webkit-border-radius: 2px;  
+    -moz-border-radius: 2px;  
+    border-radius: 2px; 
+    padding: 2px;
+	}
+	
+.convsCardActiveStyle {
+	border-color: #838B8B;
+	}
+	
+.convsCardMainStyle {
+	width: 380px;
+	}
+	
+.convsCardSubStyle {
+	width: 340px;
+	}
+	
+.convsCardPinStyle {
+	width: 325px;
+	}
+
+.convsCardStyle:after  
+ {
+    content: ' ';  
+    position: absolute;  
+    width: 0;  
+    height: 0;  
+    left: -18px;  
+    top: 5px; 
+    border: 9px solid;  
+    border-color: transparent #e3e3e3 transparent transparent ;  
+}
+
+.newConvsStyle {
+	border: 2px solid;
+	border-color: #838B8B;
+}
+
+.newConvsStyle:before {
+    content: ' ';  
+    position: absolute;  
+    width: 0;  
+    height: 0;  
+    left: -22px;  
+    top: 4px;  
+    border: 10px solid; 
+	border-color: transparent #838B8B transparent transparent ;  
+}
+
+.removeCardStyle {
+	float: right;
+	}
+	
+.cSomeMore, .pSomeMore {
+	margin-left: 80px;
+	}
+	
+.usrDateStyle {
+	color: gray;
+	}
+	
+.selectedButton{
+	background: #838B8B;
+}
+.logoStyle{
+	cursor: pointer;
+}
+
+.sorting, .sorting_asc, .sorting_desc {
+	cursor: pointer;
+	}
+
+.hLink {
+	word-wrap: break-word;
+}
+
+/* login.css */
+
+/*
+SPECIFIC STYLING FOR LOGIN AND ABOUT PAGE
+
+Measurements are exact for 2 column layout within 950px width.
+*/
+
+
+.headerBarStyle {
+	width: 950px;
+	height: 10px;
+	background-color: #E3E3E3;
+	margin: 5px 0px 5px 0px;
+	}
+	
+.leftColStyle {
+	float:left;
+	width: 464.5px;
+	height: 1036px;
+	border: 1px solid #aaaaaa;
+	margin: 5px;
+	}
+	
+.briefOuterCellStyle {
+	height: 414px;
+	}
+	
+.rightColStyle {
+	width: 464.5px;
+	height: 936px;
+	margin: 5px 5px 5px 477.5px;
+	}
+
+.loginOuterCellStyle {
+	width: 462px;
+	height: 414px;
+	border: 1px solid #aaaaaa;
+	}
+	
+.loginFieldStyle {
+	text-align: right;
+	margin-right: 30px;
+	padding: 5px;
+	}
+	
+.errorBoxStyle {
+	height: 75px;
+	}
+
+.recaptchaStyle {
+	margin-left: 100px;
+	}
+
+.registerOuterCellStyle {
+	width: 462px;
+	height: 614px;
+	border: 1px solid #aaaaaa; 
+	margin: 5px 0 5px 0;
+	}
+
+.registerFieldStyle {
+	margin-right: 25px;
+	padding: 5px;
+	text-align: right;
+	}
+
+.footerStyle {
+	font-size: 75%;
+	color: white;
+	margin: 5px;
+	text-align: center;
+	}
+
+.loginErrorStyle {
+	margin-left: 40px;	
+	}
+	
+.aboutPageImageStyle {
+	max-height: 240px;
+	max-width: 240px;
+	}
+
+/*
+END LOGIN AND ABOUT PAGESTYLING
+*/
+
+/*
+MAIN STYLING FOR ALL PAGES.
+
+Starting from top --> down.
+
+Parent Style = Main container.
+Logo Style 	= Logo.
+Page Style = First visible page.
+
+2-column styles
+Left Col Style
+Right Col Style
+
+Body Font = WWW standard.
+H1 size = 28.8 points
+H2 size = 24 points
+H3 size = 18 points
+Error = #DC143C (Crimson Red)
+Links = Pointer + underline.
+
+*/
+
+body {
+	font-family: arial,sans-serif;
+	font-size: 0.8em;
+	background-color: #1F282B;
+}
+
+.indent {
+	padding-left: 10px;
+	padding-right: 10px;	
+}
+
+.imageWidth180WrapperStyle {
+	margin: 5px;
+	width: 180px;
+	padding: 5px;
+	border: 1px solid #aaaaaa;
+}
+	
+.imageWidth240WrapperStyle {
+	margin: 5px;
+	width: 240px;
+	padding: 5px;
+	border: 1px solid #aaaaaa;
+	cursor: pointer;
+}
+
+.imageWidth240PlaceholderStyle {
+	height: 180px;
+	width: 240px;
+	background-color: #e3e3e3;
+	text-align: center;
+	}
+	
+.imageWidth240PlaceholderStyle div {
+	margin-top: 60px;
+	}
+
+.centerImageStyle {
+	display: block;
+	margin: auto;
+	}
+
+.parentStyle { 
+	width:950px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+.oneColumnStyle {
+	width: 936px;
+	border: 1px solid #aaaaaa;
+	margin: 5px;
+	}
+
+.pageStyle {
+	background-color: white;
+	width:948px;
+	margin:0 auto;
+	border: 1px solid #000000;
+   	padding: 0;
+   	box-shadow: 8px 10px 10px rgba(0,0,0,0.5),
+   	inset 8px 10px 10px rgba(255,255,255,0.75);
+   	-o-box-shadow: 8px 10px 10px rgba(0,0,0,0.5),
+   	inset 8px 10px 10px rgba(255,255,255,0.75);
+   	-webkit-box-shadow: 8px 10px 10px rgba(0,0,0,0.5),
+   	inset 8px 10px 10px rgba(255,255,255,0.75);
+   	-moz-box-shadow: 8px 10px 10px rgba(0,0,0,0.5),
+   	inset 8px 10px 10px rgba(255,255,255,0.75);
+	}
+
+/* Specific heights for specific pages */
+
+.loginPageStyle {
+	height:1348px;
+	}
+	
+.indexPageStyle {
+	min-height: 600px;
+	}
+	
+/* End specific heights for specific pages */
+
+.logoStyle {
+	font-family: HelveticaNeueLight, Palatino, Garamond, "Times New Roman", serif;
+	color:white; 
+	font-size: 2.1em;
+	}
+
+h1, h2, h3, .bougieFontStyle {
+	font-family: HelveticaNeueLight, Palatino, Garamond, "Times New Roman", serif;
+	}
+
+h1 {
+	font-size: 1.8em;
+	font-weight: normal;
+	color: #FFFFFF;
+	padding-top: 5px;
+	padding-left: 5px;
+	background-color: #838b8b;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	padding-bottom: 0px;
+	}
+	
+h2 {
+	font-size: 1.5em;
+	font-weight: normal;
+	}	
+	
+h3, .bougieFontStyle {
+	font-size: 1.2em;
+	font-weight: normal;
+	}
+	
+.largeTextStyle {
+	font-size: 1.2em;
+	font-weight: bold;	
+	}
+	
+input {
+	font-size: 0.8em;
+	}
+	
+.inputFieldStyle {
+	font-size: 1.1em;
+	}
+
+.buttonStyle {
+	font-size: .7em !important;
+	}
+	
+.possibleLongTextStyle {
+	word-wrap: break-word;
+}	
+	
+.errorStyle {
+	color: #DC143C;
+	}
+	
+.imagelinkStyle:hover {
+	cursor: pointer;
+	}
+	
+.linkStyle:hover {
+	cursor: pointer;
+	text-decoration:underline;
+	}
+	
+.bottomSpacerStyle {
+	height: 500px;
+	}
+	
+/* Begin StudentCharts Bottom Loader */
+
+.loader {
+    text-align: center;    
+}
+.loader span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 2px;
+    height: 2px;
+    margin: 2px auto;
+    background: white;
+    border-radius: 10px;
+    -webkit-animation: loader 0.3s infinite alternate;
+    -moz-animation: loader 0.3s infinite alternate;
+}
+
+.loaderScroll span {
+    background: black;	
+	}
+
+.loader span:nth-of-type(2) {
+    -webkit-animation-delay: 0.1s;
+    -moz-animation-delay: 0.1s;
+}
+.loader span:nth-of-type(3) {
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+}
+@-webkit-keyframes loader {
+  0% {
+    width: 2px;
+    height: 2px;
+    opacity: 0.9;
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    width: 10px;
+    height: 10px;
+    opacity: 0.1;
+    -webkit-transform: translateY(-21px);
+  }
+}
+@-moz-keyframes loader {
+  0% {
+    width: 2px;
+    height: 2px;
+    opacity: 0.9;
+    -moz-transform: translateY(0);
+  }
+  100% {
+    width: 10px;
+    height: 10px;
+    opacity: 0.1;
+    -moz-transform: translateY(-21px);
+  }
+}
+
+/* End StudentCharts Bottom Loader */
+
+/*School Menu*/
+
+<style type="text/css">
+
+div.sc_menu { /* Set it so we could calculate the offsetLeft */
+	position: relative;
+	height: 55px;
+	width: 800px;
+	overflow: auto;
+}
+
+ul.sc_menu {
+	display: block;
+	height: 110px;
+	/* max width here, for users without javascript */
+	width: 1500px;
+	padding: 15px 0 0 15px;
+	/* removing default styling */
+	margin: 0;
+	background: url('/imagze/navigation.png');
+	list-style: none;
+}
+
+.school {
+	color: black;
+}
+
+.sc_menu li {
+	display: block;
+	float: left;
+	padding: 0 4px;
+}
+
+.sc_menu a {
+	display: block;
+	text-decoration: none;
+}
+
+.sc_menu span {
+	display: none;
+	margin-top: 3px;
+	text-align: center;
+	font-size: 12px;
+	color: #fff;
+}
+
+.sc_menu a:hover span {
+	display: block;
+}
+
+.sc_menu img {
+	border: 3px #fff solid;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+.sc_menu a:hover img {
+	filter: alpha(opacity =   50);
+	opacity: 0.5;
+}
+
+/* Here are styles for the back button, don't look at them */
+#back {
+	display: block;
+	width: 500px;
+	text-align: center;
+	color: #003469;
+	font-size: 16px;
+}
+
+
+.headera{text-decoration:none;color:white;font-size:20px;margin-left:20px;font-size:15px;}
+
+
+</style>
+/*End School Menu*/

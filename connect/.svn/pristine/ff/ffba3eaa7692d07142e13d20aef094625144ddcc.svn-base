@@ -1,0 +1,45 @@
+<script>
+	$(function() {
+		var availableTags = [
+		    <?php 
+			    foreach ($this->schools as $school)
+				{
+					$name=$school['name'];
+					$city=$school['city'];
+					$state=$school['state'];
+					$address=$state.','.$city.','.$name;
+					echo "'{$address}',";
+				}
+		    ?>];
+
+		$( "#search" ).autocomplete({
+			minLength: 3,
+			source: availableTags
+		});
+	});
+</script>
+
+<div>
+	<input type="text" name="search" id="search" value="" /> 
+	<a id="expand" href="#"> Expand all </a>
+</div>
+<hr />
+
+ 
+<?php 
+
+if(!isset($_GET["sid"]))
+{
+ 
+	$sid=$this->user->school_id;
+}
+else 
+{
+	$sid=$_GET["sid"];
+}
+
+	//$first=SchoolList::getprevious($sid); 
+	//$second=SchoolList::getnext($sid);
+?>
+ 
+ 

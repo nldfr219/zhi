@@ -1,0 +1,124 @@
+
+
+
+<?php
+$this->headScript()->appendFile(HTTP_HOST.'/js/jquery.watermarkinput.js');
+$this->headScript()->appendFile(HTTP_HOST.'/js/chatroom.js');
+$this->headLink()->appendStylesheet(HTTP_HOST.'/css/chatroom.css');
+?>
+<?php echo $this->schoolMenu($this->schools);?>
+
+<div class="content">
+
+
+
+<div id="container" style="width:800px">
+
+<div id="header" style="background-color:#FFA500;">
+<span style="margin-bottom:0;color:white;font-size:20px">Profile</span><a style="font-size:15px;margin-left:10px" href="/profile/profile/edit">Edit</a></div>
+
+<div id="menu" style="background-color:#FFD700;  float:left;"><a href="/profile/profile/upload">
+<img src="/image/profileimage.png" width="80px" height="100px"/></a></div>
+
+<div id="content" style="background-color:#EEEEEE;  float:left; width:720px">
+
+<div><div style="float:left"><h1><?php  echo $this->currentuser;?></h1></div>
+<div style="float:right"><a href="<?php 
+if(strpos($this->uinfo->facebook,"ttp://"))
+{echo $this->uinfo->facebook;}	
+else{
+echo "http://".$this->uinfo->facebook;}?>"><img src="../image/facebook.png"></a>
+
+
+<a href="<?php 
+if(strpos($this->uinfo->linkedin,"ttp://"))
+{echo $this->uinfo->linkedin;}	
+else{
+echo "http://".$this->uinfo->linkedin;}?>"><img src="../image/linkedin.png"></a>
+
+
+<a href="<?php 
+if(strpos($this->uinfo->twitter,"ttp://"))
+{echo $this->uinfo->twitter;}	
+else{
+echo "http://".$this->uinfo->twitter;}?>"><img src="../image/twitter.png"></a>
+
+
+
+</div>
+<div style="clear:both"></div>
+</div>
+
+<?php switch($this->uinfo->class_year){
+	case 1: echo 'First';break;
+	case 2: echo 'Second';break;
+	case 3: echo  'Third';break;
+	case 4: echo 'Fourth';break;
+	case 5: echo 'Fifth';break;
+	case 6: echo 'Sixth';break;
+	case 7: echo 'Seventh';break;
+	default: echo '';
+		
+}?> Year, M.D. Candidate
+
+<br><br>
+Contact
+<hr>
+<ul style="list-style:none;">
+<li>Location: <?php echo $this->uinfo->location?></li>
+<li>Mobile number:<?php 
+
+$pnumber=$this->uinfo->phone_num;
+
+echo "(".substr($pnumber, 0, 3).") "
+		.substr($pnumber, 3, 3)."-"
+		.substr($pnumber,6);
+?></li>
+<li>E-mail: <?php echo $this->user->email?>, <?php echo $this->uinfo->altemail?></li>
+</ul>
+<br>
+Summary
+<hr>
+<ul style="list-style:none;">
+<li style="word-wrap: break-word;"><?php echo $this->uinfo->summary?></li>
+</ul>
+<br>
+Social
+<hr>
+<ul style="list-style:none;">
+<li>Status: <?php echo $this->uinfo->status;?></li>
+<li>Interests:<?php echo $this->uinfo->interests?></li>
+<li>Favorite study spot: <?php echo $this->uinfo->favstuspot?></li>
+<li>Favorite drink: <?php echo $this->uinfo->favdrink?></li>
+</ul>
+<br>
+More info
+<hr>
+<ul style="list-style:none;">
+<li>Pet: <?php echo $this->uinfo->pet?></li>
+<li>Pet Peeve: <?php echo $this->uinfo->petpeeve?></li>
+</ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div id="footer" style="clear:both;text-align:left;"> <br/>
+<input type="text" name="search" id="comment" value="" />    </div>
+<div style="clear:both"></div>
+</div>
+  
+ 
+
+
+
+
+ 
+ 
+
+</div>

@@ -1,0 +1,6 @@
+<?php
+	if(isset($_REQUEST['callback']))
+		echo $_REQUEST['callback'] . "(" . $this->json($this->result, false) .")";		
+	else
+		echo $this->json($this->result, false);
+?>

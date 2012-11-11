@@ -1,0 +1,247 @@
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content="MSHTML 6.00.2800.1126" name=GENERATOR>
+<STYLE type=text/css>A {
+	FONT-SIZE: 9pt; COLOR: #0000cc; TEXT-DECORATION: none
+}
+A:link {
+	FONT-SIZE: 9pt; COLOR: #0000cc; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-SIZE: 9pt; COLOR: red; TEXT-DECORATION: none
+}
+A:active {
+	FONT-SIZE: 9pt; COLOR: #cc0000; TEXT-DECORATION: none
+}
+TABLE {
+	FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+IMG {
+	CURSOR: hand
+}
+</STYLE>
+
+<SCRIPT language=javascript>
+<!--
+function getStr(){
+if(event.srcElement.innerText!="")
+    window.returnValue=nian.value+"-"+yue.value+"-"+event.srcElement.innerText+" "+tt.value;
+window.event.returnValue = false;
+window.close();
+}
+
+function getMonthdays(yy,mm){
+if(mm==2)
+   {if(yy%4==0 ||(yy%100==0 && yy%400==0))
+     return 29;
+    else return 28;}
+//d31={1,3,5,7,8,10,12};
+//d30={4,6,9,11};
+//for(mm in d30) return 30;
+if(mm==4 || mm==6 || mm==9 || mm==11)
+return 30;
+return 31;
+}
+
+function getFirst(yy,mm){
+var kk=new Date(yy,mm-1);
+return kk.getDay();
+}
+
+function draw(yy,mm){
+//yy=nian.value; mm=yue.value;
+var aa=new Array(49);
+//aa[0]=a00;aa[1]=a01;aa[2]=a02;aa[3]=a03;aa[4]=a04;aa[5]=a05;aa[6]=a06;
+aa[7]=a10;aa[8]=a11;aa[9]=a12;aa[10]=a13;aa[11]=a14;aa[12]=a15;aa[13]=a16;
+aa[14]=a20;aa[15]=a21;aa[16]=a22;aa[17]=a23;aa[18]=a24;aa[19]=a25;aa[20]=a26;
+aa[21]=a30;aa[22]=a31;aa[23]=a32;aa[24]=a33;aa[25]=a34;aa[26]=a35;aa[27]=a36;
+aa[28]=a40;aa[29]=a41;aa[30]=a42;aa[31]=a43;aa[32]=a44;aa[33]=a45;aa[34]=a46;
+aa[35]=a50;aa[36]=a51;aa[37]=a52;aa[38]=a53;aa[39]=a54;aa[40]=a55;aa[41]=a56;
+aa[42]=a60;aa[43]=a61;aa[44]=a62;aa[45]=a63;aa[46]=a64;aa[47]=a65;aa[48]=a66;
+var kk=0;ss=getFirst(yy,mm);
+for(i=0;i<ss;i++)
+   {aa[7+i].innerText ="";
+    }
+for(i=ss;i<7;i++)
+   {kk=kk+1;
+    aa[7+i].innerText =kk;
+    }
+days=parseInt(getMonthdays(yy,mm));
+ss=ss+6;
+//alert(kk+"--"+days);
+while(kk+ss<48)
+   {kk=kk+1;
+    if(kk<=days) {aa[ss+kk].innerText=kk;}
+    else {aa[kk+ss].innerText="";    }
+   }  
+
+}
+
+function nian_onchange() {
+yy=nian.value;
+mm=yue.value;
+draw(yy,mm);
+}
+
+function yue_onchange() {
+yy=nian.value;
+mm=yue.value;
+draw(yy,mm);
+}
+
+function gosmall(){
+y=parseInt(nian.value);
+m=parseInt(yue.value)-1;
+if(m==0) 
+   {yue.value=12;
+    if(y==1995) nian.value=2001;
+    else nian.value=y-1;
+    }
+else yue.value=m;
+draw(nian.value,yue.value);
+}
+
+function gobig(){
+y=parseInt(nian.value);
+m=parseInt(yue.value)+1;
+if(m==13) 
+   {yue.value=1;
+    if(y==2001) nian.value=1995;
+    else nian.value=y+1;
+    }
+else yue.value=m;
+draw(nian.value,yue.value);
+}
+//-->
+</SCRIPT>
+</HEAD>
+<BODY bgColor=lightgoldenrodyellow>
+<TABLE width=170 align=center border=0>
+  <TBODY>
+  <TR align=center> 
+    <TD colSpan=7> 
+      <SELECT language=javascript id=nian 
+      onchange="return nian_onchange()" size=1 name=nian> <OPTION 
+        value=1950>1950</OPTION> <OPTION value=1951>1951</OPTION> <OPTION 
+        value=1952>1952</OPTION> <OPTION value=1953>1953</OPTION> <OPTION 
+        value=1954>1954</OPTION> <OPTION value=1955>1955</OPTION> <OPTION 
+        value=1956>1956</OPTION> <OPTION value=1957>1957</OPTION> <OPTION 
+        value=1958>1958</OPTION> <OPTION value=1959>1959</OPTION> <OPTION 
+        value=1960>1960</OPTION> <OPTION value=1961>1961</OPTION> <OPTION 
+        value=1962>1962</OPTION> <OPTION value=1963>1963</OPTION> <OPTION 
+        value=1964>1964</OPTION> <OPTION value=1965>1965</OPTION> <OPTION 
+        value=1966>1966</OPTION> <OPTION value=1967>1967</OPTION> <OPTION 
+        value=1968>1968</OPTION> <OPTION value=1969>1969</OPTION> <OPTION 
+        value=1970>1970</OPTION> <OPTION value=1971>1971</OPTION> <OPTION 
+        value=1972>1972</OPTION> <OPTION value=1973>1973</OPTION> <OPTION 
+        value=1974>1974</OPTION> <OPTION value=1975>1975</OPTION> <OPTION 
+        value=1976>1976</OPTION> <OPTION value=1977>1977</OPTION> <OPTION 
+        value=1978>1978</OPTION> <OPTION value=1979>1979</OPTION> <OPTION 
+        value=1980>1980</OPTION> <OPTION value=1981>1981</OPTION> <OPTION 
+        value=1982>1982</OPTION> <OPTION value=1983>1983</OPTION> <OPTION 
+        value=1984>1984</OPTION> <OPTION value=1985>1985</OPTION> <OPTION 
+        value=1986>1986</OPTION> <OPTION value=1987>1987</OPTION> <OPTION 
+        value=1988>1988</OPTION> <OPTION value=1989>1989</OPTION> <OPTION 
+        value=1990>1990</OPTION> <OPTION value=1991>1991</OPTION> <OPTION 
+        value=1992>1992</OPTION> <OPTION value=1993>1993</OPTION> <OPTION 
+        value=1994>1994</OPTION> <OPTION value=1995>1995</OPTION> <OPTION 
+        value=1996>1996</OPTION> <OPTION value=1997>1997</OPTION> <OPTION 
+        value=1998>1998</OPTION> <OPTION value=1999>1999</OPTION> <OPTION 
+        value=2000 selected>2000</OPTION> <OPTION value=2001>2001</OPTION> 
+        <OPTION value=2002>2002</OPTION> <OPTION value=2003>2003</OPTION> 
+        <OPTION value=2004>2004</OPTION> <OPTION value=2005>2005</OPTION> 
+        <OPTION value=2006>2006</OPTION> <OPTION value=2007>2007</OPTION> 
+        <OPTION value=2008>2008</OPTION> <OPTION value=2009>2009</OPTION> 
+        <OPTION value=2010>2010</OPTION> <OPTION value=2011>2011</OPTION> 
+        <OPTION value=2012>2012</OPTION> <OPTION value=2013>2013</OPTION> 
+        <OPTION value=2014>2014</OPTION> <OPTION value=2015>2015</OPTION> 
+        <OPTION value=2016>2016</OPTION> <OPTION value=2017>2017</OPTION> 
+        <OPTION value=2018>2018</OPTION> <OPTION value=2019>2019</OPTION> 
+        <OPTION value=2020>2020</OPTION></SELECT><FONT 
+      face=宋体><B>年</B></FONT><SELECT language=javascript id=yue 
+      onchange="return yue_onchange()" size=1 name=yue> <OPTION value=1 
+        selected>1</OPTION><OPTION value=2>2</OPTION><OPTION 
+        value=3>3</OPTION><OPTION value=4>4</OPTION><OPTION 
+        value=5>5</OPTION><OPTION value=6>6</OPTION><OPTION 
+        value=7>7</OPTION><OPTION value=8>8</OPTION><OPTION 
+        value=9>9</OPTION><OPTION value=10>10</OPTION><OPTION 
+        value=11>11</OPTION><OPTION value=12>12</OPTION></SELECT><FONT 
+      face=宋体><B>月</B></FONT><BR>
+      <IMG language=javascript 
+      onclick="return gosmall();" height=18 src="images/arrow_r.gif" 
+      width=18>&nbsp;&nbsp;&nbsp;&nbsp;<IMG language=javascript onclick=gobig(); height=18 
+      src="images/arrow_l.gif" width=18></TD>
+  </TR>
+  <TR align=right bgColor=gold>
+    <TD id=a00>日</TD>
+    <TD id=a01>一</TD>
+    <TD id=a02>二</TD>
+    <TD id=a03>三</TD>
+    <TD id=a04>四</TD>
+    <TD id=a05>五</TD>
+    <TD id=a06>六</TD></TR>
+  <TR align=right>
+    <TD><A id=a10 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a11 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a12 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a13 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a14 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a15 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a16 onclick=getStr(); href="javascript://"></A></TD></TR>
+  <TR align=right>
+    <TD><A id=a20 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a21 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a22 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a23 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a24 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a25 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a26 onclick=getStr(); href="javascript://"></A></TD></TR>
+  <TR align=right>
+    <TD><A id=a30 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a31 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a32 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a33 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a34 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a35 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a36 onclick=getStr(); href="javascript://"></A></TD></TR>
+  <TR align=right>
+    <TD><A id=a40 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a41 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a42 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a43 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a44 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a45 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a46 onclick=getStr(); href="javascript://"></A></TD></TR>
+  <TR align=right>
+    <TD><A id=a50 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a51 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a52 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a53 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a54 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a55 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a56 onclick=getStr(); href="javascript://"></A></TD></TR>
+  <TR align=right>
+    <TD><A id=a60 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a61 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a62 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a63 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a64 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a65 onclick=getStr(); href="javascript://"></A></TD>
+    <TD><A id=a66 onclick=getStr(); 
+href="javascript://"></A></TD></TR>
+  <TR align="center"> 
+    <TD colspan="7" height="23"> 时分： 
+      <input type="text" name="tt" size="8" maxlength="8">
+    </TD>
+  </TR>
+  </TBODY></TABLE>
+<SCRIPT language=javascript>
+<!--
+dt=new Date();
+nian.value=dt.getYear();
+yue.value=dt.getMonth()+1;
+draw(nian.value,yue.value);
+tt.value=dt.getHours()+":"+dt.getMinutes()+":"+dt.getSeconds();
+//-->
+</SCRIPT>
+</BODY></HTML>

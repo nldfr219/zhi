@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Zhi Ma's Homepage</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<script src="js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+var menuOpen = 0;
+function menu_open()
+{  
+   menuOpen = $(this).find('ul').css('visibility', 'visible');}
+
+function menu_close()
+{  if(menuOpen) menuOpen.css('visibility', 'hidden');}
+
+
+$(document).ready(function()
+{  $('#menu1 .pre').bind('mouseover', menu_open)
+   $('#menu1 .pre').bind('mouseout',  menu_close)});
+
+document.onclick = menu_close;
+</script>
+<script src="js/banner.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="wrapper">
+<div id="top">
+<div class="inner">
+<div id="logo">
+<span id="logotop">Welcome</span>
+<br>
+<span id="logobot">Zhi Ma's Homepage</span>
+</div>
+<div id="menu">
+
+<ul id="menu1">
+<li class="pre"><a href="#">Home</a></li>
+<li class="pre"><a href="http://zmzhima.com/shop">e-commerce site</a></li>
+<li class="pre"><a href="http://zmzhima.com/connect/public">social-academic site</a></li>
+<li class="pre"><a href="#">Shortcodes</a><ul><li><a href="http://zmzhima.com/myboard">Ajax board</a></li><li><a href="http://zmzhima.com/zftest/public">Music Album</a></li><li><a href="http://zmzhima.com/previous">Previous resume</a></li></ul></li>
+
+</ul>
+
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<div id="middle">
+<div id="mtop">
+<div id="minner">
+
+<div id="banner">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+                    <td><a href="#"><img src="images/1.jpg" alt="" width="960px" height="440px"></a></td>
+                    <td><a href="#"><img src="images/2.jpg" alt="" width="960px" height="440px"></a></td>
+                    <td><a href="#"><img src="images/3.jpg" alt="" width="960px" height="440px"></a></td>
+                    <td><a href="#"><img src="images/4.jpg" alt="" width="960px" height="440px"></a></td>
+</tr>					
+</table>					
+</div>
+        
+</div>
+</div>
+<div id="mbot">
+<div class="inner">
+<div>
+<div class="half">
+<img src="images/edu.png" width="48px" height="48px"><span class="edu">Education</span><p class="next">University of Electrical Science and Technology of China(UESTC), SiChuan, China 2006-2008 Earned 43 credit hours in Electrical Computer Engineering
+<br><br>
+Illinois Institute of Technology(IIT), Chicago, IL Aug 2008-Dec 2010 B.S. in Electrical Computer Engineering
+<br><br>
+University of Southern California(USC), Los Angeles, CA Jan 2011-May 2012 M.S. in Computer Science M.S. GPA: 3.5</p>
+</div>
+<div class="half">
+<img src="images/skills.jpg" width="80px" height="30px" style="margin:0 0 0 -10px"><p class="next">Programming(JAVA, C, C++, Python, Perl)<br><br>HTML, CSS, java_script, jQuery, AJAX<br>
+<br>Linux, Apache, MySQL, PHP, Zend, Amazon EC2<br><br>phpMyAdmin, Dreamweaver, Wordpress(zmzhima.com/wordpress), Joomla(zmzhima.com/joomla), Zencart(zmzhima.com/zencart)
+<br><br>
+MATLAB, Linux, CHINESE language, Microsoft Office, Eclipse IDE, Visual C++</p>
+</div>
+<div class="clear"></div>
+</div>
+
+<div>
+<div class="half">
+<img src="images/exp.png" width="140px" height="55px" style="margin:0 0 -5px 0"><span class="next">
+<br>
+Hands-on experience, May 11-Now
+<br>
+Design and develop this website.
+<br>
+Design and develop a basic e-commerce website(front end: <a href="http://zmzhima.com/shop">http://zmzhima.com/shop</a>;back end: <a href="http://zmzhima.com/shop/admin.php">http://zmzhima.com/shop/admin.php</a><br> username:admin password:admin).
+<br>
+Design and develop the prototype of a social-academic network website using zend framework(<a href="http://zmzhima.com/connect/public">http://zmzhima.com/connect/public</a>).
+<br><br>
+
+Internship at EmboldenMedia, May 12-June 12
+<br>
+Participate the design and development of a new website at EmboldenMedia including both front end and back end. PHP and MySQL are used.
+<br><br>
+
+Research Assistant,IIT Wireless Network and Communications Research Center, June 09-Aug 09
+<br>
+ Assist with detection and mitigation of interference on WiFi, bluetooth, cordless phone, Microwave oven and baby monitor. Participate in discussion and modification of the project raw code.
+
+</span>
+</div>
+<br>
+<div class="half"><img src="images/act.jpg" width="48px" height="48px"><p class="next">IIT Commencement Honor Marshal, May 2009
+<br></br>
+IIT Big Event Volunteer, April 2009
+</p>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="topfooter">
+<div id="tfinner">
+<div id="footerpart1"><ul class="nostyle"><li class="footerheader">Contact me</li><li><img src="images/phone.jpg" width="16px" height="16px"> &nbsp;&nbsp;213-300-2063</li><li><img src="images/email.jpg" width="16px" height="16px">
+ &nbsp;&nbsp;nldfr219@gmail.com</li><li><img src="images/address.jpg" width="16px" height="16px"> &nbsp;&nbsp;2831 Ellendale Pl., Los Angeles, CA, 90007</li></ul></div>
+<div id="footerpart2"><ul class="nostyle"><li class="footerheader">Keep In Touch</li><li><a href="#" id="first"><img src="images/facebook.png"></a>
+<a href="#"><img src="images/myspace.png"></a><a href="#"><img src="images/linkedin.png" ></a><a href="#"><img src="images/flickr.png" ></a><a href="#"><img src="images/twitter.png" ></a></li></ul></div>
+<div id="footerpart3"><ul class="nostyle"><li><span class="footerheader">Comments</span></li><li><textarea></textarea></li><li><button>Submit</button></li></ul></div>
+<div class="clear"></div>
+</div>
+</div>
+<hr>
+<div id="botfooter">
+<div id="bfinner">
+<div class="left">Copyright &copy; 2012 - Zhi Ma's Homepage ¡¤ Design: Zhi Ma</div><div class="right"><a href="#">Home</a><a href="#">Page</a><a href="#">Shortcodes</a><a href="#">Features</a></div> 
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</body>
+</html>

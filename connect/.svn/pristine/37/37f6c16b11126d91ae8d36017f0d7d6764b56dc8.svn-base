@@ -1,0 +1,61 @@
+jQuery(function($){
+   $("#comment").Watermark("Say something");
+   $("#search").Watermark("USC School of Medicine");
+   
+});
+
+ 
+$(function() {
+	 
+	$("#tree").treeview({
+ 
+		animated: "fast",
+		control:"#sidetreecontrol",
+ 
+		persist: "location",
+ 
+	});
+ 
+	$(".ulhide").css({'display': "none" });
+})
+
+function dump(obj) {
+    var out = '';
+    for (var i in obj) {
+        out += i + ": " + obj[i] + "\n";
+    }
+
+    alert(out);
+
+    // or, if you wanted to avoid alerts...
+
+    var pre = document.createElement('pre');
+    pre.innerHTML = out;
+    document.body.appendChild(pre)
+}
+
+
+$('#submit_comment').click(function() {
+	 var form_error = false;
+	 var obj = $('#comment').val();
+			 alert(obj);
+		 $.ajax({
+			  type: "GET",
+			  url: "ajax/register/check-email?email=" + obj[2].value,
+			  async: false,
+			  dataType: "json",
+			  success: function(data) {
+				  if(data.error) {
+					  form_error = true;
+					  $('#reg_error').text('Email alreay exist, please use different email');
+				  }
+			  }
+		 });
+	 
+	 
+	 if(form_error)
+		 return false;
+	
+});
+
+});

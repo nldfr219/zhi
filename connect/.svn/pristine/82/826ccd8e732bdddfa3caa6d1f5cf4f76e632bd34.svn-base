@@ -1,0 +1,37 @@
+<?php
+class DefaultBaseController extends Zend_Controller_Action {
+	
+	protected $user;
+	
+	public function init() {
+		
+		
+		if(isset($_GET['logout'])&&$_GET['logout']==true){
+		
+			$auth = Zend_Auth::getInstance();
+			$auth->clearIdentity();
+			$this->_redirect(HTTP_HOST);
+		}
+		
+		
+		
+		
+		if ($this->getRequest()->getControllerName() != 'index' && !Zend_Auth::getInstance()->hasIdentity()) {
+			$this->_redirect(HTTP_HOST);
+			return;
+		} else if($this->getRequest()->getControllerName() == 'index' && Zend_Auth::getInstance()->hasIdentity()) {
+			$this->_redirect(HTTP_HOST . "/chatroom/chat");
+			return;
+		}
+ 
+		 $this->user= Zend_Auth::getInstance()->getIdentity();
+ 
+
+	}
+	
+	public function postDispatch()
+	{
+		
+	}
+}
+?>

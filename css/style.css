@@ -1,0 +1,55 @@
+body{font-family: "Lucida Sans Unicode","Lucida Grande",Garuda,sans-serif;color:#777777}
+#top{margin-top:20px;position:relative;z-index:100}
+
+a{text-decoration:none;}
+.pre a{color:#777777}
+.inner{width:960px;margin:0 auto}
+#logo{float:left;text-align:center;}
+#logotop{font-size:40px;font-weight:100;}
+#logobot{font-size:11px;color:#888888}
+#menu{float:right;margin-top:15px}
+#menu1 .pre{float:left;list-style:none;margin-left:60px}
+#menu1 li ul li{list-style:none;float:none;width:200px;}
+#menu1 li ul{visibility:hidden;padding:0;position:absolute;background-color:#F5F5F5;margin-left:-12px;}
+.clear{clear:both}
+#menu1 li ul li a{display:block;padding:5px 12px}
+#menu1 li ul li a:hover{background:none repeat scroll 0 0 #E0E0E0}
+#menu1 li a{padding:20px 5px;display:block}
+#footer{background-color:#282828;color:#E0E0E0}
+#tfinner{width:960px;margin:0 auto}
+#bfinner{width:960px;margin:0 auto}
+#tfinner ul li{font-size:12px}
+#tfinner ul .footerheader{font-size:25px;font-weight:100}
+.nostyle{list-style:none;padding:0}
+#tfinner ul li{margin-top:10px}
+.footerheader{font-size:25px;font-weight:100}
+textarea{background-color:#282828;width: 250px; height: 130px;}
+button{padding:5px 10px}
+#footerpart1{float:left;width:27%;margin-right:10%}
+#footerpart2{float:left;width:27%}
+#footerpart3{float:right;width:27%}
+#footerpart2 ul li a{margin-left:5px}
+#footerpart2 ul li a#first{margin-left:0}
+#bfinner{font-size:12px;padding-bottom:5px}
+.left{float:left}
+.right{float:right}
+.right a{margin-left:30px;color:#E0E0E0}
+
+#mtop{background-color:#383838}
+#banner{position:absolute;width:3860px;}
+#minner{width:960px;margin:0 auto;height:520px;overflow:hidden;position:relative;z-index:1;top:40px}
+.leftarrow{position:absolute;top:0;left:0;height:440px;z-index:5;opacity:0;}
+.rightarrow{position:absolute;top:0;right:0;height:440px;opacity:0;}
+.half{}
+.edu{font-size:20px}
+.next{font-size:12px}
+
+a:hover{color:blue}
+
+
+
+
+
+
+
+

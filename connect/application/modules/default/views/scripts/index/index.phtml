@@ -1,0 +1,186 @@
+
+<?php  require_once('recaptchalib.php');?>
+<div class='pageStyle loginPageStyle'>
+
+	<div class='leftColStyle'>
+		<div class='briefOuterCellStyle'>
+			<h1>Synopsis</h1>
+			<table>
+				<tr>
+					<td><img src="image/transparent.gif" class='scSprite scIcon user' />
+					</td>
+					<td><strong>ConnectStudents.com</strong> is a free social-academic
+						network for U.S. students.</td>
+				</tr>
+				<tr>
+					<td><img src="image/transparent.gif"
+						class='scSprite scIcon medInterpreter' /></td>
+					<td><strong>Chat instantly</strong> with local and regional
+						colleagues.</td>
+				</tr>
+				<tr>
+					<td><img src="image/transparent.gif"
+						class='scSprite scIcon community' /></td>
+					<td><strong>Student profiles</strong> are all available to you.</td>
+				</tr>
+				<tr>
+					<td><img src="image/transparent.gif"
+						class='scSprite scIcon healthEd' /></td>
+					<td><strong>Academic notes</strong> can be shared and compared.</td>
+				</tr>
+				<tr>
+					<td><img src="image/transparent.gif"
+						class='scSprite scIcon crownLarge' /></td>
+					<td><strong>Give props</strong> to your colleagues for sharing
+						their knowledge.</td>
+				</tr>
+				<tr>
+					<td><img src="image/transparent.gif"
+						class='scSprite scIcon california' /></td>
+					<td><strong>Custom made</strong> by your California classmates.</td>
+				</tr>
+				<tr>
+					<td><img src="image/transparent.gif"
+						class='scSprite scIcon tshirt'  /></td>
+					<td><strong>Free swanky t-shirt</strong> for first 500 students.
+						Get yours today. <br /> <a id='shirtOffer' href="#">Rules</a>
+						apply.</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+
+	<div class='rightColStyle'>
+		<div class='loginOuterCellStyle'>
+			<h1>Login</h1>
+			<div class='loginTableContent'>
+				<form action="login" method="post" id="login_form">
+					<br /> 
+					
+					<div class='errorStyle loginFieldStyle'>
+						<p id="errmsg">
+						
+						<?php if(isset($_GET['login_fail'])){ 
+							if($_GET['login_fail']==20)
+								echo "The reCAPTCHA wasn't entered correctly, please try again!";
+							elseif($_GET['login_fail']==200)
+								echo  "Please input both the email and password!";
+							else
+								echo "Invalid email or password, please try again!";
+						}
+						 ?>
+						</p>
+					</div>
+					<br /> <br />
+					<div class='loginFieldStyle'>
+						<label> E-mail:</label> <input class='inputFieldStyle' type="text"
+							name="email" id="email" style="width: 257px" />
+					</div>
+					<div class='loginFieldStyle'>
+						<label> Password:</label> <input class='inputFieldStyle'
+							type="password" name="password" id="password"
+							style="width: 257px" />
+					</div>
+					<div class='loginFieldStyle'>
+						<a href="#" id="forgotPasswordLink"
+							style='font-size: 75%; color: gray; text-decoration: underline;'>Resend
+							password.</a>
+					</div>
+
+					<div class='loginFieldStyle'>
+						<input type="checkbox" name="rememberMe" id="rememberMe"
+							checked="checked" value="1" /><label>Keep me logged on.</label> <br />
+						
+						
+						
+						
+
+					<div class='recaptchaStyle'>
+					 <?php  
+						  $publickey = "6Le5sNESAAAAAKyLNnnte73Va8rbaUlk1Dim3utS"; // you got this from the signup page
+						  if(isset($_GET['login_fail'])){
+						  if($_GET['login_fail']>=5){
+						  echo recaptcha_get_html($publickey);
+						  
+						  echo "<input type='hidden' name='captcha' value='true'/>";
+						  }
+						  }
+                          
+  						 ?>			
+					</div>
+		
+						<br/>					
+						<input type="submit" name="submit" id='loginButton' class='ButtonEnter' value="Login"/>
+					</div>
+				</form>
+			</div>
+		</div>
+	
+	
+		<div class='registerOuterCellStyle'>
+			<h1>Register</h1>
+			<div class='loginTableContent'>
+				<form id="register_form" method="POST" action="/connect/public/ajax/register">
+					<div class='loginFieldStyle'>
+							<label> First Name:</label>
+							<input class='inputFieldStyle' type="text" name="first_name" id="first_name" style="width:257px"/>
+					</div>
+					<div class='loginFieldStyle'>
+							<label> Last Name:</label>
+							<input class='inputFieldStyle' type="text" name="last_name" id="last_name" style="width:257px"/>
+					</div>
+					<div class='loginFieldStyle'>
+							<label> E-mail:</label>
+							<input class='inputFieldStyle' type="text" name="email" id="email" style="width:257px"/>
+					</div>
+					<div class='loginFieldStyle'>
+							<label> Confirm Email:</label>
+							<input class='inputFieldStyle' type="text" name="cemail" id="cemail" style="width:257px"/>
+					</div>
+					<div class='loginFieldStyle'>
+							<label> Password:</label>
+							<input class='inputFieldStyle' type="password" name="password" id="password" style="width:257px"/>
+					</div>
+					<div class='loginFieldStyle'>
+							<label> School:</label>
+							<select style="width:263px" id="school_id" name="school_id" >
+								<option value="0">Select school</option>
+								<?php 
+									foreach ($this->schools as $school) {
+										echo "<option value='{$school['school_id']}'>{$school['name']}</option>";
+									}
+								?>
+							</select>
+					</div>
+					<div class='loginFieldStyle'>
+							<label> School year:</label>
+							<select style="width:263px" id="school_year" name="school_year" >
+								<option value="0">Select school year</option>
+								<?php 
+									while($this->min_year <= $this->max_year) {
+										echo "<option value='{$this->min_year}'>$this->min_year</option>";
+										$this->min_year++;
+									}
+								?>
+							</select>
+					</div>
+					<div class='loginFieldStyle'>
+							<label> Class year:</label>
+							<input class='inputFieldStyle' type="text" name="class_year" id="class_year" style="width:257px"/>
+					</div>
+					<div class='loginFieldStyle'>
+						<input type="submit" value="Register"  class='ButtonEnter' />
+					</div>
+				</form>
+				<div id="reg_error" class="errorStyle"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class='footerStyle'>
+
+</div>
+
+

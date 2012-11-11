@@ -1,0 +1,22 @@
+<?php
+class Zend_View_Helper_SchoolTreeMenu {
+	
+   	public $view;
+   	    
+   	public function setView(Zend_View_Interface $view)    
+   	{        
+   		$this->view = $view;    
+   	}
+    	
+   	public function schoolTreeMenu($states) 
+   	{	
+   		$this->view->states = $states;   		
+ 
+		$this->view->setScriptPath(APPLICATION_PATH.'/layouts/helpers/school-menu/');		
+		$sHTML = $this->view->render('school-tree-menu.phtml');		
+		return $sHTML;
+	}
+	
+}
+
+?>

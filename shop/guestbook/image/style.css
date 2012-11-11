@@ -1,0 +1,28 @@
+A {text-decoration: none; color: #336699; font-family: "宋体"; font-size: 9pt}
+A:hover {text-decoration: underline; color: #FF0000; font-family: "宋体"; font-size: 9pt} 
+body {  font-family: "宋体", "serif"; font-size: 9pt}
+td {  font-family: "宋体", "serif"; font-size: 9pt}
+input {  font-size: 9pt}
+p {  font-size: 9pt}
+br {  font-size: 9pt}
+tr {  font-size: 9pt}
+table {  font-size: 9pt}
+INPUT {	FONT-FAMILY: arial,宋体; FONT-SIZE: 9pt; PADDING-TOP: 3px }
+INPUT.text {
+	BACKGROUND-COLOR: #f0f0f0; BORDER-BOTTOM: #101010 1px solid; BORDER-LEFT: #101010 1px solid; BORDER-RIGHT: #101010 1px solid; BORDER-TOP: #101010 1px solid; COLOR: #000000
+}
+INPUT.file {
+	BACKGROUND-COLOR: #f0f0f0; BORDER-BOTTOM: #101010 1px solid; BORDER-LEFT: #101010 1px solid; BORDER-RIGHT: #101010 1px solid; BORDER-TOP: #101010 1px solid; COLOR: #000000
+}
+SELECT {
+	BACKGROUND-COLOR: #f0f0f0; BORDER-BOTTOM: #101010 1px solid; BORDER-LEFT: #101010 1px solid; BORDER-RIGHT: #101010 1px solid; BORDER-TOP: #101010 1px solid; COLOR: #000000
+}
+TEXTAREA {
+	BACKGROUND-COLOR: #f0f0f0; BORDER-BOTTOM: #101010 1px solid; BORDER-LEFT: #101010 1px solid; BORDER-RIGHT: #101010 1px solid; BORDER-TOP: #101010 1px solid; COLOR: #000000
+}
+.stedit { font-size: 9pt; border-left: 1px solid #4a3163; 
+ border-right: 1px solid #4a3163; border-top: 1px solid #4a3163; 
+ border-bottom: 1px solid #000066 }
+.stbtm { background-color: #cococo; color: #000000; font-size: 9pt; height: 20px; 
+ border-left: 1px solid #ffffff; border-right: 1px solid #665b8e; 
+ border-top: 1px solid #ffffff; border-bottom: 1px solid #665b8e }

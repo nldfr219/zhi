@@ -1,0 +1,66 @@
+		    <?php 
+		    
+		    $count = SchoolList::$totalCount;
+		    
+		    $output = "";
+			    foreach ($this->schools as $key=> $school)
+				{	
+					$name=$school['name'];
+					$city=$school['city'];
+					$state=$school['state'];
+					$address=$state.','.$city.','.$name;
+					$data= array('id'=>$school['school_id'], 'value'=>$address);
+					$output.=json_encode($data);
+					if($key<=$count) $output.=" , ";
+					//echo "'{$data}',";
+				}
+		    ?>
+
+<script>
+function delayer(id){
+	  window.location = "chat?sid="+id;
+	}
+function log( message ) {
+	$( "<div/>" ).text( message ).prependTo( "#log" );
+	$( "#log" ).scrollTop( 0 );
+}
+	$(function() {
+		var availableTags =[<?php echo $output; ?>];
+
+		//console.log(availableTags);
+		$( "#search" ).autocomplete({
+			minLength: 0,
+			source: availableTags,
+			select: function( event, ui ) {
+				delayer(ui.item.id);
+			}
+		});
+
+
+	});
+</script>
+
+<div>
+	<input type="text" name="search" id="search" value="" />
+	<a id="expand" href="#"> Expand all </a>
+</div>
+<hr />
+
+
+<?php 
+
+if(!isset($_GET["sid"]))
+{
+ 
+	$sid=$this->user->school_id;
+}
+else 
+{
+	$sid=$_GET["sid"];
+}
+
+	//$first=SchoolList::getprevious($sid); 
+	//$second=SchoolList::getnext($sid);
+?>
+ 
+ 

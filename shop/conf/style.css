@@ -1,0 +1,148 @@
+.think {
+	BACKGROUND-COLOR: #f3f3f3; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid
+}
+.stbtm {
+	BACKGROUND-COLOR: #f3f3f3; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #ffffff 1px solid; BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #ffffff 1px solid; COLOR: #000000; FONT-SIZE: 9pt; HEIGHT: 20px; WIDTH: 60px
+}
+.stbtm1 {
+	BACKGROUND-COLOR: #f3f3f3; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #ffffff 1px solid; BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #ffffff 1px solid; COLOR: #000000; FONT-SIZE: 9pt; HEIGHT: 20px; WIDTH: 100px
+}
+.stbtm2 {
+	BACKGROUND-COLOR: #ffcc99; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #ffffff 1px solid; BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #ffffff 1px solid; COLOR: #000000; FONT-SIZE: 9pt; HEIGHT: 20px; WIDTH: 70px
+}
+P {
+	FONT-SIZE: 14px
+}
+.dot {
+	PADDING-TOP: 15px
+}
+.blur {
+	COLOR: #cccccc; FONT-SIZE: 9pt; PADDING-TOP: 5px
+}
+.stedit {
+	BORDER-BOTTOM: #ff6600 1px solid; BORDER-LEFT: #ff6600 1px solid; BORDER-RIGHT: #ff6600 1px solid; BORDER-TOP: #ff6600 1px solid; FONT-SIZE: 9pt
+}
+TD {
+	FONT-SIZE: 9pt; LETTER-SPACING: 0pt; LINE-HEIGHT: 130%; WORD-SPACING: 0pt
+}
+BODY {
+	FONT-FAMILY: "宋体"; FONT-SIZE: 12px; LINE-HEIGHT: 15pt; MARGIN-TOP: 0px; PADDING-TOP: 0px; SCROLLBAR-FACE-COLOR: #cccccc; SCROLLBAR-HIGHLIGHT-COLOR: #e7e7e7; SCROLLBAR-SHADOW-COLOR: #e7e7e7; SCROLLBAR-3DLIGHT-COLOR: #ffffff; SCROLLBAR-ARROW-COLOR: #ffffff; SCROLLBAR-TRACK-COLOR: #ffffff; SCROLLBAR-DARKSHADOW-COLOR: #ffffff
+}
+.thin {
+	BORDER-BOTTOM-STYLE: solid; BORDER-LEFT-STYLE: solid; BORDER-RIGHT-STYLE: solid; BORDER-TOP-STYLE: solid
+}
+SELECT {
+	BORDER-BOTTOM-COLOR: black; BORDER-BOTTOM-STYLE: none; BORDER-LEFT-COLOR: black; BORDER-LEFT-STYLE: none; BORDER-RIGHT-COLOR: black; BORDER-RIGHT-STYLE: none; BORDER-TOP-COLOR: #99ff00; BORDER-TOP-STYLE: none
+}
+.p14 {
+	FONT-SIZE: 14px; LINE-HEIGHT: 150%
+}
+P {
+	FONT-SIZE: 14px
+}
+.p9 {
+	FONT-SIZE: 9pt
+}
+A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+A.clink03:link {
+	COLOR: #00007f; TEXT-DECORATION: underline
+}
+A.clink03:visited {
+	COLOR: #00007f; TEXT-DECORATION: underline
+}
+A.clink03:active {
+	COLOR: #00007f; TEXT-DECORATION: underline
+}
+A.clink03:hover {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A.clink04:link {
+	COLOR: #999999; TEXT-DECORATION: underline
+}
+A.clink04:visited {
+	COLOR: #999999; TEXT-DECORATION: underline
+}
+A.clink04:active {
+	COLOR: #999999; TEXT-DECORATION: underline
+}
+A.clink04:hover {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A.title:link {
+	COLOR: #cc0000; TEXT-DECORATION: underline
+}
+A.title:visited {
+	COLOR: #cc0000; TEXT-DECORATION: underline
+}
+A.title:active {
+	COLOR: #cc0000; TEXT-DECORATION: none
+}
+A.title:hover {
+	COLOR: #cc0000; TEXT-DECORATION: none
+}
+A.softtitle:link {
+	COLOR: #cc0000; PADDING-LEFT: 2px; PADDING-TOP: 15px; TEXT-DECORATION: none
+}
+A.softtitle:visited {
+	COLOR: #cc0000; PADDING-LEFT: 2px; PADDING-TOP: 15px; TEXT-DECORATION: none
+}
+A.softtitle:active {
+	COLOR: #cc0000; PADDING-LEFT: 2px; PADDING-TOP: 15px; TEXT-DECORATION: underline
+}
+A.softtitle:hover {
+	COLOR: #cc0000; PADDING-LEFT: 2px; PADDING-TOP: 15px; TEXT-DECORATION: underline
+}
+A.link:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.link:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.link:active {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.link:hover {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.link:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.link:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.shadow {
+	FILTER: dropshadow(color=#ffcc99,offx=1,offy=0,positive=3)
+}
+.p13 {
+	COLOR: #ff3300; FONT-SIZE: 15px
+}
+.pad {
+	PADDING-TOP: 10px
+}
+.pad01 {
+	PADDING-TOP: 20px
+}
+.pad03 {
+	PADDING-TOP: 2px
+}
+.dance {
+	WORD-SPACING: 2mm
+}
+
+.button {font-family:宋体; font-size:9pt; line-height:11pt; color:#000000; border-color:#ffffff #ffffff #ffffff #ffffff; overflow:hidden; clip:rect(); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+/* 管理员表格第一个tr的颜色 */
+.firstalt	{BACKGROUND-COLOR: #D0D0D0}
+/* 管理员表格第二个tr的颜色 */
+.secondalt	{BACKGROUND-COLOR: #C5C5C5}
+.tblhead	{BACKGROUND-COLOR: #40364D; COLOR:#F5D300; FONT-SIZE:9pt}
+/* 管理员表格头的背景 */
+.tblborder	{BACKGROUND-COLOR: #51485F;	color: #CCCCCC; }
+/* 管理员表格外表格的边框 */

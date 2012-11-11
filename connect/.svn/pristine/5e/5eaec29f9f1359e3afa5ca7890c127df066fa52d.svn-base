@@ -1,0 +1,21 @@
+jQuery(function($){
+   $("#comment").Watermark("Say something");
+   $("#search").Watermark("USC School of Medicine");
+});
+
+ 
+$(function() {
+	$("#tree").treeview({
+		collapsed: true,
+		unique: false,
+		animated: "fast",
+		control:"#sidetreecontrol",
+		prerendered: true,
+		persist: "location",
+		cookieId: "treeview-black"
+	});
+	
+	
+	
+})
+

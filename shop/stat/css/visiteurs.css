@@ -1,0 +1,47 @@
+BODY       { font-family: Helvetica, Arial,宋体; font-size: 13px; color: white; scrollbar-face-color: #5A6BA5; scrollbar-shadow-color: #1C2D67; scrollbar-highlight-color: #1C2D67; scrollbar-3dlight-color: #1C2D67; scrollbar-darkshadow-color: #1C2D67; scrollbar-track-color: #1C2D67; scrollbar-arrow-color: #B8C8FE }
+
+A          { font-family: Helvetica, Arial,宋体; font-size: 13px; color: #FDFC65; font-weight: bold }
+A:link     { font-family: Helvetica, Arial,宋体; font-size: 13px; color: #FDFC65; font-weight: normal; text-decoration: none }
+A:visited  { font-family: Helvetica, Arial,宋体; font-size: 13px; color: #FDFC65; font-weight: normal; text-decoration: none }
+A:hover    { font-family: Helvetica, Arial,宋体; font-size: 13px; color: #FDFC65; font-weight: normal; text-decoration: underline }
+
+A.month          { font-family: Helvetica, Arial,宋体; font-size: 12px; color: #1C2D67; font-weight: bold }
+A.month:link     { font-family: Helvetica, Arial,宋体; font-size: 12px; color: #1C2D67; font-weight: bold; text-decoration: none }
+A.month:visited  { font-family: Helvetica, Arial,宋体; font-size: 12px; color: #1C2D67; font-weight: bold; text-decoration: none }
+A.month:hover    { font-family: Helvetica, Arial,宋体; font-size: 12px; color: #1C2D67; font-weight: bold; text-decoration: underline }
+
+/* server        */
+A.server         { font-family: Helvetica, Arial,宋体; font-size: 13px; color: #A9C6FA; font-weight: normal }
+A.server:link    { font-family: Helvetica, Arial,宋体; font-size: 13px; color: #A9C6FA; font-weight: normal; text-decoration: none }
+A.server:visited { font-family: Helvetica, Arial,宋体; font-size: 13px; color: #A9C6FA; font-weight: normal; text-decoration: none }
+A.server:hover   { font-family: Helvetica, Arial,宋体; font-size: 13px; color: #FDFC65; font-weight: normal; text-decoration: underline }
+
+/* referer link */
+A.ref         { font-family: Helvetica, Arial,宋体; font-size: 13px; text-decoration: none      }
+A.ref:link    { font-family: Helvetica, Arial,宋体; font-size: 13px; text-decoration: none      }
+A.ref:visited { font-family: Helvetica, Arial,宋体; font-size: 13px; text-decoration: none      }
+A.ref:hover   { font-family: Helvetica, Arial,宋体; font-size: 13px; text-decoration: underline }
+
+A.archived  { font-family: Helvetica, Arial,宋体; font-size: 12px; color: #B8C8FE; font-weight: normal } /* archived      */
+A.array     { font-family: Helvetica, Arial,宋体; font-size: 13px; color: #FCFC99; font-weight: bold   } /* arrays titles */
+A.delay     { font-family: Helvetica, Arial,宋体; font-size: 12px; color: #B8C8FE; font-weight: normal } /* cache delay   */
+A.error     { font-family: Helvetica, Arial,宋体; font-size: 13px; color:   white; font-weight: bold; background: #ED1015 } /* error msg */
+A.ok        { font-family: Helvetica, Arial,宋体; font-size: 13px; color: #1C2D67; font-weight: bold; background: #A6F38B }
+A.host      { font-family: Helvetica, Arial,宋体; font-size: 13px; color: #ADFF85; font-weight: normal } /* hostname      */
+A.keywords  { font-family: Helvetica, Arial,宋体; font-size: 13px; color: #B6D0FF; font-weight: normal } /* keywords      */
+A.title     { font-family: Helvetica, Arial,宋体; font-size: 20px; color: #1C2D67; font-weight: bold   } /* main title    */
+A.viewtitle { font-family: Helvetica, Arial,宋体; font-size: 16px; color: #1C2D67; font-weight: bold; background: #FCFC99 } /* vieuw title   */
+A.item      { font-family: Helvetica, Arial,宋体; font-size: 13px; color: #C1D3FF; font-weight: normal } /* item          */
+
+TH.vis       { font-family: Helvetica, Arial,宋体; font-size: 12px; color: #1C2D67; background: #FCFC99 }  /* columns         */
+TH.vis1      { font-family: Helvetica, Arial,宋体; font-size: 13px; color: white; background: #354785 }  /* columns         */
+
+TD.avg       { font-family: Helvetica, Arial,宋体; font-size: 12px; color: #1C2D67; background: #FDFDB9 }  /* averages        */
+TD.fond      { font-family: Helvetica, Arial,宋体; font-size: 13px; color:   white; background: #1C2D67 }  /* data            */
+TD.vis       { font-family: Helvetica, Arial,宋体; font-size: 13px; color:   white; background: #354785 }  /* data            */
+TD.vis1      { font-family: Helvetica, Arial,宋体; font-size: 12px; color:   white; background: #354785 }  /* working days    */
+TD.vis2      { font-family: Helvetica, Arial,宋体; font-size: 12px; color:   white; background: #B8C8FE }  /* not a valid day */
+TD.vis3      { font-family: Helvetica, Arial,宋体; font-size: 12px; color:   white; background: #5A6BA5 }  /* week-end        */
+TD.visref    { font-family: Helvetica, Arial,宋体; font-size: 13px; color:   white; background: #495B98 }  /* referers        */
+TD.month     { font-family: Helvetica, Arial,宋体; font-size: 12px; color: #1C2D67; background: #FCFC99; font-weight: bold; } /* months */
+TD.poweredby { font-family: Helvetica, Arial,宋体; font-size: 13px; color:   white; background: #495B98 }  /* powered by      */

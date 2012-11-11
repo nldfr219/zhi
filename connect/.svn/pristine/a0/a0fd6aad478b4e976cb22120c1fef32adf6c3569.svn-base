@@ -1,0 +1,124 @@
+
+
+
+<?php
+$this->headScript()->appendFile(HTTP_HOST.'/js/jquery.watermarkinput.js');
+$this->headScript()->appendFile(HTTP_HOST.'/js/chatroom.js');
+$this->headLink()->appendStylesheet(HTTP_HOST.'/css/chatroom.css');
+?>
+<?php echo $this->schoolMenu($this->schools);?>
+
+<div class="content">
+
+
+
+<div id="container" style="width:800px">
+
+<div id="header" style="background-color:#FFA500;">
+<span style="margin-bottom:0;color:white;font-size:20px">Profile</span><a style="font-size:15px;margin-left:10px" href="/profile/profile/edit">Edit</a></div>
+
+<div id="menu" style="background-color:#FFD700;  float:left;"><a href="/profile/profile/upload">
+<img src="/image/profileimage.png" width="80px" height="100px"/></a></div>
+
+<div id="content" style="background-color:#EEEEEE;  float:left; width:720px">
+
+<div><div style="float:left"><h1><?php  echo $this->currentuser;?></h1></div>
+<div style="float:right"><a href="<?php 
+if(strpos($this->user->userinfo->facebook,"ttp://"))
+{echo $this->user->userinfo->facebook;}	
+else{
+echo "http://".$this->user->userinfo->facebook;}?>"><img src="../image/facebook.png"></a>
+
+
+<a href="<?php 
+if(strpos($this->user->userinfo->linkedin,"ttp://"))
+{echo $this->user->userinfo->linkedin;}	
+else{
+echo "http://".$this->user->userinfo->linkedin;}?>"><img src="../image/linkedin.png"></a>
+
+
+<a href="<?php 
+if(strpos($this->user->userinfo->twitter,"ttp://"))
+{echo $this->user->userinfo->twitter;}	
+else{
+echo "http://".$this->user->userinfo->twitter;}?>"><img src="../image/twitter.png"></a>
+
+
+
+</div>
+<div style="clear:both"></div>
+</div>
+
+<?php switch($this->user->userinfo->class_year){
+	case 1: echo 'First';break;
+	case 2: echo 'Second';break;
+	case 3: echo  'Third';break;
+	case 4: echo 'Fourth';break;
+	case 5: echo 'Fifth';break;
+	case 6: echo 'Sixth';break;
+	case 7: echo 'Seventh';break;
+	default: echo '';
+		
+}?> Year, M.D. Candidate
+
+<br><br>
+Contact
+<hr>
+<ul>
+<li>Location: <?php echo $this->user->userinfo->location?></li>
+<li>Mobile number:<?php 
+
+$pnumber=$this->user->userinfo->phone_num;
+
+echo "(".substr($pnumber, 0, 3).") "
+		.substr($pnumber, 3, 3)."-"
+		.substr($pnumber,6);
+?></li>
+<li>E-mail: <?php echo $this->user->email?>, <?php echo $this->user->userinfo->altemail?></li>
+</ul>
+<br>
+Summary
+<hr>
+<ul>
+<li style="word-wrap: break-word;"><?php echo $this->user->userinfo->summary?></li>
+</ul>
+<br>
+Social
+<hr>
+<ul>
+<li>Status: <?php echo $this->user->userinfo->status;?></li>
+<li>Interests:<?php echo $this->user->userinfo->interests?></li>
+<li>Favorite study spot: <?php echo $this->user->userinfo->favstuspot?></li>
+<li>Favorite drink: <?php echo $this->user->userinfo->favdrink?></li>
+</ul>
+<br>
+More info
+<hr>
+<ul>
+<li>Pet: <?php echo $this->user->userinfo->pet?></li>
+<li>Pet Peeve: <?php echo $this->user->userinfo->petpeeve?></li>
+</ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div id="footer" style="clear:both;text-align:left;"> <br/>
+<input type="text" name="search" id="comment" value="" />    </div>
+<div style="clear:both"></div>
+</div>
+  
+ 
+
+
+
+
+ 
+ 
+
+</div>

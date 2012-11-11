@@ -1,0 +1,36 @@
+	
+<div>
+
+<div id="sidetree">
+<div class="treeheader"><a href=''>Show activity of classmates </a></div>
+<div id="sidetreecontrol"> <a href="?#">Collapse All</a> | <a href="?#">Expand All</a> </div>
+<ul class="treeview" id="tree">
+   <?php 
+   		$School = new Table_Schools();
+	    foreach ($this->states as $key => $state)
+		{
+			
+			if($schoollist=$School->getSchoolByState($key))
+			{
+				$count=count($schoollist);
+				echo "<li class='expandable'><div class='hitarea expandable-hitarea'></div><a href=''>".$state."</a>";
+				echo "<ul  class='ulhide' style='display:none;' >";
+				foreach ($schoollist as $num=>$s)
+				{
+					if(strlen( $s["name"])>30)
+						 $name = substr( $s["name"] ,0,30)."...";
+					else $name = $s["name"];
+					echo "<li";  
+					if($count==$num+1) echo " class='last' ";
+					echo "><a href=''>". $name ." </a></li>";
+				}
+ 
+				echo "	</ul></li>";
+			}
+			else
+				echo "<li><a href=''>".$state."</a></li>";
+		}
+    ?>
+    </ul>
+ </div>
+ </div>

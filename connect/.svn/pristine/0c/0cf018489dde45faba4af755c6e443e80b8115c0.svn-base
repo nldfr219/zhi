@@ -1,0 +1,32 @@
+<?php
+
+class Profile_ProfileController extends DefaultBaseController
+{
+	public function init() {
+		parent::init();
+        $this->_helper->layout->setLayout('studentcharts');
+				
+	}
+	
+	public function indexAction() {
+		$this->view->schools = SchoolList::load();
+		$tActivity = new Table_Activities();
+		$result= $tActivity->getActivity(NULL, NULL, NULL, NULL);
+		$tUser = new Table_UsersInfo();
+		$output = $result->toArray();
+		
+ 		if(!isset($_GET["uid"]))
+ 			$currentuser=$tUser->getUserName($this->user->user_id);
+ 		else
+ 			$currentuser=$tUser->getUserName($_GET["uid"]);
+ 		//echo $_GET["uid"].$currentuser; die;
+		$this->view->assign("user",$this->user);
+		$this->view->assign("currentuser",$currentuser);
+		$this->view->assign("activity",$output);	
+
+	}
+	
+
+	
+	
+}

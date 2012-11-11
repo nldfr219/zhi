@@ -1,0 +1,61 @@
+<html>
+<body>
+
+
+
+<?php
+$this->headScript()->appendFile(HTTP_HOST.'/js/jquery.watermarkinput.js');
+$this->headScript()->appendFile(HTTP_HOST.'/js/chatroom.js');
+$this->headLink()->appendStylesheet(HTTP_HOST.'/css/chatroom.css');
+?>
+<?php echo $this->schoolMenu($this->schools);?>
+
+<div class="content">
+
+
+
+<div id="container" style="width:800px">
+
+<div id="header" style="background-color:#FFA500;">
+<h1 style="margin-bottom:0;">Profile</h1></div>
+
+<div id="menu" style="background-color:#FFD700;  float:left;">
+<img src="/image/profileimage.png"/></div>
+
+<div id="content" style="background-color:#EEEEEE;  float:left;">
+<h2><?php  echo $this->currentuser;?></h2>  
+<p>M.D Candidate, USC School of Engineering, Graduated,Class of 2012 </p>
+<p><a href="http://www.facebook.com/">FaceBook Page</a>,<a href="http://www.linkedin.com/">LinkedIn Page</a> </p>
+ 
+<p>Mobile number : (213)587-1047</p>
+<p>Pager number : (213)587-1047</p>
+<p>Currently associated with: USC, TJUT</p> 
+
+
+<h3>Totem</h3>
+<p>National Rank: 53/3234 students</p>
+<p>Local Rank: 54/234 students</p>
+<p>Current Location: Third Year Survival Guide </p>
+
+
+<h3>Stockpile</h3>
+<a href="#">How to Juggle Business and Medicine.(Extracurricular)</a><br/>
+<a href="#">How to Perform a Testicular Exam on Yourself.(Clinical Foundations 3)</a>
+</div>
+
+<div id="footer" style="clear:both;text-align:left;"> <br/>
+<input type="text" name="search" id="comment" value="" />    </div>
+
+</div>
+  
+ 
+
+
+
+
+ 
+ 
+
+</div>
+ </body>
+</html>

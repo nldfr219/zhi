@@ -1,0 +1,1 @@
+var menuOpen = 0;function menu_open(){     menuOpen = $(this).find('ul').css('visibility', 'visible');}function menu_close(){  if(menuOpen) menuOpen.css('visibility', 'hidden');}$(document).ready(function(){  $('#menu1 .pre').bind('mouseover', menu_open)   $('#menu1 .pre').bind('mouseout',  menu_close)});document.onclick = menu_close;

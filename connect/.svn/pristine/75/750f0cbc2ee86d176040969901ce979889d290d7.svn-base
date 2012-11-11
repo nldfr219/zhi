@@ -1,0 +1,32 @@
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  	<meta name="robots" content="noodp,noydir" /> 
+  	<?php 
+  	
+  	$this->headLink()->appendStylesheet(HTTP_HOST.'/css/sc.css'); 
+    $this->headScript()->prependFile(HTTP_HOST.'/js/jquery.js') //2nd
+    					->prependScript("HTTP_HOST = '".HTTP_HOST."';"); //1st
+    					
+    $this->headScript()->appendFile(HTTP_HOST.'/js/sc.index.js');
+  	?>
+  	<?php 
+  		echo $this->headLink();
+  		echo $this->headScript();
+  	?>
+</head>
+<body>
+
+
+	<div class="parentStyle">
+		<div class="logoStyle">
+			StudentCharts<span style="color:red;">.</span>
+		</div>
+		<div class="pageStyle loginPageStyle">
+			<?php echo $this->layout()->content ?>
+		</div>
+	</div>
+		
+</body>
+</html>

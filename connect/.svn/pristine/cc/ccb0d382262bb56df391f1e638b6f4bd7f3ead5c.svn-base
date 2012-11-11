@@ -1,0 +1,16 @@
+<?php
+class Activity {
+	
+	protected $tActivity;
+	
+	function __construct() {
+		$this->tActivity = new Table_Activities();
+	}
+	
+	static function getActivity($creatorid,$type, $receiverid, $schoolid) {
+		$tActivity = new Table_Activities();
+		return $users->getActivity( $creatorid, $type, $receiverid, $schoolid );	
+	}	
+	
+
+}
